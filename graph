@@ -1,0 +1,46 @@
+```dataviewjs
+const blue = 'rgb(54, 162, 235)'
+const green = 'rgb(3, 162, 20)'
+
+const tagPages = dv.pages('"Util/Daily Notes"');
+const days = 5;
+
+var labels = [],
+	wordCount = [],
+	wordGoal = [];
+
+// Loop through every note and add data to the above arrays
+tagPages.forEach(note => {
+    // add the name of the note
+    labels.push(note.file.name);
+    // add the word count for the note
+    wordCount.push(note.wordcount);
+    wordGoal.push(note.wordgoal);
+});
+
+
+
+const chartData = {  
+    type: 'line',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Word Count',
+            fill: false,
+			backgroundColor: blue,
+		    borderColor: blue,
+            data: wordCount
+        },
+        {
+            label: 'Daily Word Count Goal',
+            fill: false,
+			backgroundColor: green,
+		    borderColor: green,
+		    borderDash: [5, 5],
+            data: wordGoal
+        }]
+    }
+}
+
+window.renderChart(chartData, this.container);
+```
