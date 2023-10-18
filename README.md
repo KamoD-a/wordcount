@@ -1,5 +1,5 @@
 # wordcount
-A simple Dataview.js Query that will display the wordcount taken from the Daily Notes.
+A simple Dataview.js Query for Obsidian that will display the wordcount taken from the Daily Notes as a line graph.
 
 # Prerequisites:
 - Daily Notes (Core Plugin)
