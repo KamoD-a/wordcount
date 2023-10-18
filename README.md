@@ -8,6 +8,7 @@ A simple Dataview.js Query that will display the wordcount taken from the Daily 
 
 # Usage:
 Create a Daily Note and enter the total word count of the project. Also enter which wordgoal you want to have by now.
+By default it is displayed as a line graph, but if you prefer bar just change the type in the const chartData to 'bar'.
 ### Example:
 It is the fifth day of your writing project. You want to have written 2.500 words by now and you have written 2.700 words in total. This is what you have to write in your Daily Note:
 - wordcount::2700
